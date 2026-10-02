@@ -7,19 +7,29 @@ import {
 } from "lucide-react";
 import "./App.css";
 
+import imgPair from "./assets/images/pcos-vs-healthy-uterus.jpeg";
+import imgOvary from "./assets/images/pcos-vs-healthy-ovary.png";
+import imgInsulin from "./assets/images/effects/insulin-resistance.webp";
+import imgAndrogen from "./assets/images/effects/androgen-excess.webp";
+import imgOvulation from "./assets/images/effects/irregular-ovulation.webp";
+import imgFollicles from "./assets/images/effects/many-small-follicles.webp";
+import imgShort from "./assets/images/cycle-short.jpg";
+import imgExtended from "./assets/images/cycle-extended.jpg";
+import imgProlonged from "./assets/images/cycle-prolonged.jpg";
+
 const IMG = {
-  pair: "/images/pcos-vs-healthy-uterus.jpeg",
-  ovary: "/images/pcos-vs-healthy-ovary.png",
+  pair: imgPair,
+  ovary: imgOvary,
 };
 
 const effects = [
-  { title: "Insulin resistance", img: "/images/effects/insulin-resistance.webp", tag: "Metabolic", icon: "◉",
+  { title: "Insulin resistance", img: imgInsulin, tag: "Metabolic", icon: "◉",
     description: "Cells respond less to insulin, which can push the body to make more of it." },
-  { title: "Androgen excess", img: "/images/effects/androgen-excess.webp", tag: "Hormonal", icon: "≈",
+  { title: "Androgen excess", img: imgAndrogen, tag: "Hormonal", icon: "≈",
     description: "Raised androgens can show up as acne, hair fall and unwanted hair." },
-  { title: "Irregular ovulation", img: "/images/effects/irregular-ovulation.webp", tag: "Cycle", icon: "≋",
+  { title: "Irregular ovulation", img: imgOvulation, tag: "Cycle", icon: "≋",
     description: "Follicles that stall can mean ovulation is late or missed, so cycles become unpredictable." },
-  { title: "Many small follicles", img: "/images/effects/many-small-follicles.webp", tag: "On the ovary", icon: "✿",
+  { title: "Many small follicles", img: imgFollicles, tag: "On the ovary", icon: "✿",
     description: "Often called cysts, these are follicles that have not matured. They can be seen on ultrasound." },
 ];
 
@@ -46,10 +56,10 @@ function view(tab) {
 
 
 const CASES = {
-  short: { name: "Shortened cycle", range: "about 15 days", src: "/images/cycle-short.jpg", ratio: "339/559" },
+  short: { name: "Shortened cycle", range: "about 15 days", src: imgShort, ratio: "339/559" },
   typical: { name: "Typical cycle", range: "21–35 days", src: IMG.ovary, ratio: "704/768", size: "200% 100%", pos: "100% 0" },
-  extended: { name: "Extended cycle", range: "about 42 days", src: "/images/cycle-extended.jpg", ratio: "337/559" },
-  prolonged: { name: "Prolonged cycle", range: "90+ days", src: "/images/cycle-prolonged.jpg", ratio: "339/559" },
+  extended: { name: "Extended cycle", range: "about 42 days", src: imgExtended, ratio: "337/559" },
+  prolonged: { name: "Prolonged cycle", range: "90+ days", src: imgProlonged, ratio: "339/559" },
 };
 const caseFor = (d) => (d < 21 ? "short" : d <= 35 ? "typical" : d <= 65 ? "extended" : "prolonged");
 
