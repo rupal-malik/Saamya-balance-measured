@@ -1,0 +1,4 @@
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{min-width:320px;background:#fcfaf9;color:#2b2233}
+#root{max-width:none;margin:0;padding:0;text-align:left}
